@@ -5,7 +5,11 @@ function Results({ data, isLoading, isError, error }) {
 
     return ( 
         <div>
-            {data.map(obj => <p>{obj.word}</p>)}
+            {
+                data.length !== 0 ? 
+                    data.map(obj => <p>{obj.word}</p>) 
+                    : <h2>That word is not in our database. Please try again.</h2>
+            }
         </div>
      );
 }
