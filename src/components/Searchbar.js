@@ -20,20 +20,21 @@ function Searchbar() {
 
     return (
         <>
-            <div>
+            <div className="Searchbar--search">
                 <form onSubmit={(e) => {
                     e.preventDefault();
                     word.length !== 0 ? setEnabled(true) : setPlaceholder("Please enter word...");
                     refetch();
                 }}>
                     <input 
+                        className="Searchbar--text-field"
                         type="text"
                         placeholder={placeholder}
                         name="wordSearchbar"
                         onChange={(e) => setWord(e.target.value)}
                         value={word}
                     />
-                    <button>Search</button>
+                    <button className="Searchbar--button">Search</button>
                 </form>
             </div>
             {data && 
