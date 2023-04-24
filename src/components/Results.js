@@ -1,10 +1,6 @@
 import { nanoid } from 'nanoid';
 
-function Results({ data, isLoading, isError, error }) {
-
-    if(isLoading) return <h2>Loading...</h2>
-    if(isError) return <h2>{error}</h2>
-
+function Results({ data }) {
     return ( 
         <div>
             {data.length !== 0 &&

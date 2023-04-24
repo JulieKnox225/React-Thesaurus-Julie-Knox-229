@@ -37,12 +37,15 @@ function Searchbar() {
                     <button className="Searchbar--button">Search</button>
                 </form>
             </div>
+            {
+                isLoading && <h2 className='Results--no-word'>Loading...</h2>
+            }
+            {
+                isError && <h2 className='Results--no-word'>{error.message}</h2>
+            }
             {data && 
                 <Results 
-                    data={data.data} 
-                    isLoading={isLoading}
-                    isError={isError}
-                    error={error}
+                    data={data.data}
                 />
             }
         </>

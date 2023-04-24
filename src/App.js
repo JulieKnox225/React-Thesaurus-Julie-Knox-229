@@ -1,5 +1,4 @@
 import { QueryClientProvider, QueryClient } from "react-query";
-import { ReactQueryDevtools } from 'react-query/devtools';
 import Searchbar from "./components/Searchbar";
 import './App.css';
 
@@ -11,7 +10,6 @@ function App() {
       <div>
         <Searchbar />
       </div>
-      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
